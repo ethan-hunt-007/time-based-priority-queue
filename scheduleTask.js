@@ -18,7 +18,7 @@ function scheduleEvent(event) {
 function readCSV(fileName) {
 	fs.createReadStream(fileName, {'objectMode' : true, 'highWaterMark' : 40}).pipe(csvConverter)
 		.on('error', function(message) {
-			console.log("Error in scheduling task : " + message);
+			console.log("Error in reading json : " + message);
 		})
 		.on('record_parsed', function(data) {
 			var record = JSON.parse(JSON.stringify(data));

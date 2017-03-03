@@ -1,0 +1,24 @@
+{
+  "name": "time-based-priority-queue",
+  "version": "1.0.0",
+  "description": "a queue for scheduling tasks based on time and priority",
+  "main": "scheduleTask.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethan-hunt-007/time-based-priority-queue.git"
+  },
+  "keywords": [
+    "priority",
+    "queue",
+    "time-based"
+  ],
+  "author": "Jayant Jaiswal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethan-hunt-007/time-based-priority-queue/issues"
+  },
+  "homepage": "https://github.com/ethan-hunt-007/time-based-priority-queue#readme",
+  "dependencies" : {
+    "csvtojson" : "latest"
+  }
+}
