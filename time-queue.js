@@ -2,14 +2,14 @@ function TimeQueue(MAX_ELEMENTS) {
 	this.front = -1;
 	this.rear = -1;
 	this.MAX_ELEMENTS = MAX_ELEMENTS;
-	this._queue = Array.apply(null, {length: this.MAX_ELEMENTS}).map(Number.call, Number);
+	this._queue = new Array(this.MAX_ELEMENTS);
 }
 
-TimeQueue.prototype.queue = function(data) {
-	if(rear >= this.MAX_ELEMENTS - 1) {
+TimeQueue.prototype.enqueue = function(data) {
+	if(this.rear >= this.MAX_ELEMENTS - 1) {
 		return;
 	}
-	if((front == -1) && (rear == -1)) {
+	if((this.front == -1) && (this.rear == -1)) {
 		this.front++;
 		this.rear++;
 		this._queue[this.rear] = data;
